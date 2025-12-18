@@ -15,16 +15,26 @@
             flex-direction: column;
             align-items: center;
         }
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-        .subtitle {
+        h1 { color: #2c3e50; margin-bottom: 5px; text-align: center; }
+        .subtitle { margin-bottom: 20px; color: #666; font-style: italic; font-size: 1.1rem; }
+        
+        /* Requirements Box */
+        .requirements-box {
+            background: #fff;
+            border-left: 5px solid #3498db;
+            padding: 20px;
+            max-width: 800px;
             margin-bottom: 30px;
-            color: #666;
-            font-style: italic;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 4px;
         }
+        .requirements-box h3 { margin-top: 0; color: #2980b9; }
+        .requirements-box ul { columns: 2; -webkit-columns: 2; -moz-columns: 2; }
+
+        /* Jump Menu */
+        .nav-container { margin-bottom: 40px; }
+        select { padding: 10px; border-radius: 5px; border: 1px solid #ccc; font-size: 1rem; cursor: pointer; }
+
         .project-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
@@ -40,110 +50,100 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             text-align: center;
             width: 500px;
+            scroll-margin-top: 20px;
         }
         .project-card h2 {
-            margin-top: 0;
-            font-size: 1.4rem;
-            color: #34495e;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-            margin-bottom: 15px;
+            margin-top: 0; font-size: 1.4rem; color: #34495e;
+            border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 15px;
         }
-        iframe {
-            border: none;
-            border-radius: 8px;
-            background-color: #eee;
+        iframe { border: none; border-radius: 8px; background-color: #eee; }
+
+        /* Footer */
+        footer {
+            margin-top: 50px;
+            padding: 30px;
+            text-align: center;
+            border-top: 1px solid #ccc;
+            width: 100%;
+            max-width: 800px;
+            color: #7f8c8d;
         }
+        footer a { color: #3498db; text-decoration: none; }
+
         @media (max-width: 600px) {
             .project-grid { grid-template-columns: 1fr; }
             .project-card { width: 95%; }
+            .requirements-box ul { columns: 1; }
             iframe { width: 100%; height: auto; aspect-ratio: 485 / 402; }
         }
     </style>
 </head>
-<body>
+<body id="top">
 
     <h1>21st Century Skills Slaughterhouse Videogame Projects</h1>
-    <p class="subtitle">Showcasing student creativity and technical design.</p>
+    <p class="subtitle">Showcasing 17 Student Technical Designs</p>
+
+    <div class="requirements-box">
+        <h3>Project Requirements & Skills</h3>
+        <p>Students were tasked with designing a playable experience that demonstrates:</p>
+        <ul>
+            <li><strong>Critical Thinking:</strong> Logical game flow and bug testing.</li>
+            <li><strong>Creativity:</strong> Original asset design and storytelling.</li>
+            <li><strong>Collaboration:</strong> Peer review and technical feedback.</li>
+            <li><strong>Information Literacy:</strong> Managing digital assets and code blocks.</li>
+            <li><strong>Persistence:</strong> Solving complex "Slaughterhouse" logic puzzles.</li>
+        </ul>
+    </div>
+
+    <div class="nav-container">
+        <select onchange="document.getElementById(this.value).scrollIntoView({behavior: 'smooth'})">
+            <option value="">— Jump to a Student —</option>
+            <option value="p1">1. Mo</option>
+            <option value="p2">2. Ava</option>
+            <option value="p3">3. Tate</option>
+            <option value="p4">4. Desmond</option>
+            <option value="p5">5. Arav</option>
+            <option value="p6">6. Naveen</option>
+            <option value="p7">7. Owen</option>
+            <option value="p8">8. Delilah</option>
+            <option value="p9">9. Razeen</option>
+            <option value="p10">10. Ashley</option>
+            <option value="p11">11. JuJu</option>
+            <option value="p12">12. Landon</option>
+            <option value="p13">13. Maximus</option>
+            <option value="p14">14. Mason</option>
+            <option value="p15">15. Reed</option>
+            <option value="p16">16. Brody</option>
+            <option value="p17">17. Carson</option>
+        </select>
+    </div>
 
     <div class="project-grid">
-
-        <div class="project-card">
-            <h2>1. Mo</h2>
-            <iframe src="https://scratch.mit.edu/projects/1257191197/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-        </div>
-
-        <div class="project-card">
-            <h2>2. Ava</h2>
-            <iframe src="https://scratch.mit.edu/projects/1257170412/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-        </div>
-
-        <div class="project-card">
-            <h2>3. Tate</h2>
-            <iframe src="https://scratch.mit.edu/projects/1257169309/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-        </div>
-
-        <div class="project-card">
-            <h2>4. Desmond</h2>
-            <iframe src="https://scratch.mit.edu/projects/1256212034/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-        </div>
-
-        <div class="project-card">
-            <h2>5. Arav</h2>
-            <iframe src="https://scratch.mit.edu/projects/1255237908/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-        </div>
-
-        <div class="project-card">
-            <h2>6. Naveen</h2>
-            <iframe src="https://scratch.mit.edu/projects/1251740825/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-        </div>
-
-        <div class="project-card">
-            <h2>7. Owen</h2>
-            <iframe src="https://scratch.mit.edu/projects/1257600274/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-        </div>
-
-        <div class="project-card">
-            <h2>8. Delilah</h2>
-            <iframe src="https://scratch.mit.edu/projects/1250637857/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-        </div>
-
-        <div class="project-card">
-            <h2>9. Razeen</h2>
-            <iframe src="https://scratch.mit.edu/projects/1255239215/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-        </div>
-
-        <div class="project-card">
-            <h2>10. Ashley</h2>
-            <iframe src="https://scratch.mit.edu/projects/1256805598/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-        </div>
-
-        <div class="project-card">
-            <h2>11. JuJu</h2>
-            <iframe src="https://scratch.mit.edu/projects/1257606557/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-        </div>
-
-        <div class="project-card">
-            <h2>12. Landon</h2>
-            <iframe src="https://scratch.mit.edu/projects/1250635613/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-        </div>
-
-        <div class="project-card">
-            <h2>13. Maximus</h2>
-            <iframe src="https://scratch.mit.edu/projects/1257169725/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-        </div>
-
-        <div class="project-card">
-            <h2>14. Mason</h2>
-            <iframe src="https://scratch.mit.edu/projects/1257607347/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-        </div>
-
-        <div class="project-card">
-            <h2>15. Reed</h2>
-            <iframe src="https://scratch.mit.edu/projects/1257163482/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-        </div>
-
+        <div class="project-card" id="p1"><h2>1. Mo</h2><iframe src="https://scratch.mit.edu/projects/1257191197/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+        <div class="project-card" id="p2"><h2>2. Ava</h2><iframe src="https://scratch.mit.edu/projects/1257170412/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+        <div class="project-card" id="p3"><h2>3. Tate</h2><iframe src="https://scratch.mit.edu/projects/1257169309/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+        <div class="project-card" id="p4"><h2>4. Desmond</h2><iframe src="https://scratch.mit.edu/projects/1256212034/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+        <div class="project-card" id="p5"><h2>5. Arav</h2><iframe src="https://scratch.mit.edu/projects/1255237908/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+        <div class="project-card" id="p6"><h2>6. Naveen</h2><iframe src="https://scratch.mit.edu/projects/1251740825/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+        <div class="project-card" id="p7"><h2>7. Owen</h2><iframe src="https://scratch.mit.edu/projects/1257600274/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+        <div class="project-card" id="p8"><h2>8. Delilah</h2><iframe src="https://scratch.mit.edu/projects/1250637857/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+        <div class="project-card" id="p9"><h2>9. Razeen</h2><iframe src="https://scratch.mit.edu/projects/1255239215/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+        <div class="project-card" id="p10"><h2>10. Ashley</h2><iframe src="https://scratch.mit.edu/projects/1256805598/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+        <div class="project-card" id="p11"><h2>11. JuJu</h2><iframe src="https://scratch.mit.edu/projects/1257606557/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+        <div class="project-card" id="p12"><h2>12. Landon</h2><iframe src="https://scratch.mit.edu/projects/1250635613/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+        <div class="project-card" id="p13"><h2>13. Maximus</h2><iframe src="https://scratch.mit.edu/projects/1257169725/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+        <div class="project-card" id="p14"><h2>14. Mason</h2><iframe src="https://scratch.mit.edu/projects/1257607347/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+        <div class="project-card" id="p15"><h2>15. Reed</h2><iframe src="https://scratch.mit.edu/projects/1257163482/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+        <div class="project-card" id="p16"><h2>16. Brody</h2><iframe src="https://scratch.mit.edu/projects/1253784117/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+        <div class="project-card" id="p17"><h2>17. Carson</h2><iframe src="https://scratch.mit.edu/projects/1257613590/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
     </div>
+
+    <footer>
+        <p><a href="#top">↑ Back to Top</a></p>
+        <p>Curated by <strong>Jason Slaughter</strong></p>
+        <p>Contact: <a href="mailto:jason.slaughter@pccsk12.com">jason.slaughter@pccsk12.com</a></p>
+        <p>&copy; 2025 | P-CCS 21st Century Skills</p>
+    </footer>
 
 </body>
 </html>
