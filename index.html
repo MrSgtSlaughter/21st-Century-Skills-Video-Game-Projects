@@ -17,42 +17,57 @@
         }
         h1 {
             color: #2c3e50;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
             text-align: center;
+        }
+        .subtitle {
+            margin-bottom: 30px;
+            color: #666;
+            font-style: italic;
         }
         .project-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
             gap: 30px;
             width: 100%;
-            max-width: 1200px;
+            max-width: 1400px;
+            justify-items: center;
         }
         .project-card {
             background: white;
             border-radius: 12px;
-            padding: 15px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             text-align: center;
+            width: 500px;
         }
         .project-card h2 {
             margin-top: 0;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             color: #34495e;
             border-bottom: 2px solid #eee;
             padding-bottom: 10px;
+            margin-bottom: 15px;
         }
         iframe {
             border: none;
             border-radius: 8px;
-            max-width: 100%;
+            background-color: #eee;
+        }
+        @media (max-width: 600px) {
+            .project-grid { grid-template-columns: 1fr; }
+            .project-card { width: 95%; }
+            iframe { width: 100%; height: auto; aspect-ratio: 485 / 402; }
         }
     </style>
 </head>
 <body>
 
     <h1>21st Century Skills Slaughterhouse Videogame Projects</h1>
+    <p class="subtitle">Showcasing student creativity and technical design.</p>
 
     <div class="project-grid">
+
         <div class="project-card">
             <h2>1. Mo</h2>
             <iframe src="https://scratch.mit.edu/projects/1257191197/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
@@ -72,6 +87,27 @@
             <h2>4. Desmond</h2>
             <iframe src="https://scratch.mit.edu/projects/1256212034/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
         </div>
+
+        <div class="project-card">
+            <h2>5. Arav</h2>
+            <iframe src="https://scratch.mit.edu/projects/1255237908/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+        </div>
+
+        <div class="project-card">
+            <h2>6. Naveen</h2>
+            <iframe src="https://scratch.mit.edu/projects/1251740825/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+        </div>
+
+        <div class="project-card">
+            <h2>7. Owen</h2>
+            <iframe src="https://scratch.mit.edu/projects/1257600274/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+        </div>
+
+        <div class="project-card">
+            <h2>8. Delilah</h2>
+            <iframe src="https://scratch.mit.edu/projects/1250637857/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+        </div>
+
     </div>
 
 </body>
